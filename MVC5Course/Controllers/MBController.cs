@@ -14,7 +14,8 @@ namespace MVC5Course.Controllers
             var data = new NewProductVM()
             {
                 Price = 100,
-                ProductName = "T-Shirt"
+                ProductName = "T-Shirt",
+                ProductId = 5
             };
 
 
