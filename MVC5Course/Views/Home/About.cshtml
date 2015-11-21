@@ -9,7 +9,7 @@
 
 @CommonBlock()
 
-@*@display啟用停用(ViewBag.IsEnabled)*@
+@display啟用停用(ViewBag.IsEnabled)
 
 
 @section footer {
@@ -18,14 +18,23 @@
 
 @helper CommonBlock()
 {
-    <p>Use this area to provide additional information.</p>
+    <p>Use this area to provide additional information.</p> @Getdate()
 }
 
 
 
-@*@helper display啟用停用(bool status)
+@functions{
+    public IHtmlString Getdate()
+    {
+        return new HtmlString(DateTime.Now.ToShortDateString());
+    }
+}
+
+
+
+@helper display啟用停用(bool status)
 {
-    @if(status)
+    if(status)
     {
         @:啟用
     }
@@ -33,4 +42,4 @@
     {
         @:停用
     }
-}*@
+}
