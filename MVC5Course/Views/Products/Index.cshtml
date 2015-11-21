@@ -10,7 +10,8 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm(ViewContext.RouteData.Values["action"].ToString(),
+    ViewContext.RouteData.Values["controller"].ToString(),FormMethod.Post))
 {
     <input type="search" name="search" value="" accesskey="s" placeholder="請輸入關鍵字 (Alt+S)" />
     <input type="submit" value="搜尋" />
