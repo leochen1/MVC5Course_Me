@@ -7,7 +7,16 @@
 <h2>Index</h2>
 
 <p class="pull-right">
-    @Html.ActionLink("Create New", "Create")
+
+    @*1*@
+    <a class="logo" href="/Products/Create"></a>
+    @Html.ActionLink(" ", "Create", null, new { @class = "logo"})
+
+    @*2*@
+    <a class="logo" href="@Url.Action("Create")"></a>
+
+
+    @Html.ActionLink("Create New", "Create", null, new { @class="btn",data_test="123" })
 </p>
 
 @using (Html.BeginForm(ViewContext.RouteData.Values["action"].ToString(),
