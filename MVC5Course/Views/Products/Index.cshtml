@@ -5,6 +5,8 @@
 }
 
 
+@HtmlActionLink("Index")
+
 @helper HtmlActionLink(string action)
 {
     <a href="@Url.Action(action)"><i class="icon-edit"></i><span class="hidden-tablet"> Forms</span></a>
