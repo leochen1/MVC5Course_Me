@@ -30,6 +30,7 @@
                     <li>@Html.ActionLink("測試頁面", "Test", "Home")</li>
                     <li>@Html.ActionLink("ActionResult", "Index", "AR")</li>
                     <li>@Html.ActionLink("ModelBinding", "Index", "MB")</li>
+                    <li>@Html.ActionLink("AjaxHelper", "Index", "Ajax")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -45,6 +46,7 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
