@@ -13,7 +13,7 @@ namespace MVC5Course.Controllers
         {
             return View();
         }
-
+        [OutputCache(NoStore=true,Duration=0)]
         public string GetTime()
         {
             return DateTime.Now.ToString();
